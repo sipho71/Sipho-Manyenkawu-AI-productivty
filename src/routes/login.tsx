@@ -67,13 +67,13 @@ function LoginPage() {
             autoComplete="email"
             placeholder="you@company.com"
             value={values.email}
-            aria-invalid={!!errors.email}
-            aria-describedby={errors.email ? "email-error" : undefined}
+            aria-invalid={!!errors["email"]}
+            aria-describedby={errors["email"] ? "email-error" : undefined}
             onChange={(e) => setValues((v) => ({ ...v, email: e.target.value }))}
           />
-          {errors.email ? (
+          {errors["email"] ? (
             <p id="email-error" className="text-xs text-destructive">
-              {errors.email}
+              {errors["email"]}
             </p>
           ) : null}
         </div>
@@ -86,13 +86,13 @@ function LoginPage() {
             autoComplete="current-password"
             placeholder="••••••••"
             value={values.password}
-            aria-invalid={!!errors.password}
-            aria-describedby={errors.password ? "password-error" : undefined}
+            aria-invalid={!!errors["password"]}
+            aria-describedby={errors["password"] ? "password-error" : undefined}
             onChange={(e) => setValues((v) => ({ ...v, password: e.target.value }))}
           />
-          {errors.password ? (
+          {errors["password"] ? (
             <p id="password-error" className="text-xs text-destructive">
-              {errors.password}
+              {errors["password"]}
             </p>
           ) : null}
         </div>
