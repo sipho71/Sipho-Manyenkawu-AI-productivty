@@ -17,5 +17,6 @@ export const aiPipeline = createServerFn({ method: "POST" })
   .handler(async ({ data }) => {
     const { runGemini } = await import("./ai.server");
     const result = await runGemini(data.action, data.payload as Record<string, unknown>);
-    return { action: data.action, result };
+    // Serialized as JSON so the RPC boundary stays strictly serializable.
+    return { action: data.action, json: JSON.stringify(result) };
   });
