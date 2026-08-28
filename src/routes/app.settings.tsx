@@ -1,12 +1,12 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { Settings as SettingsIcon, ShieldCheck, LogOut } from "lucide-react";
+import { createFileRoute } from "@tanstack/react-router";
+import { Settings as SettingsIcon, ShieldCheck } from "lucide-react";
 
 import { PageHeader } from "@/components/page-header";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Separator } from "@/components/ui/separator";
+
 import {
   Select,
   SelectContent,
@@ -120,19 +120,14 @@ function SettingsPage() {
 
         <Card>
           <CardHeader>
-            <CardTitle className="text-base">Account</CardTitle>
-            <CardDescription>Session and access.</CardDescription>
+            <CardTitle className="text-base">Workspace</CardTitle>
+            <CardDescription>Current environment.</CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
             <p className="text-sm text-muted-foreground">
-              Signed in as <span className="font-medium text-foreground">sipho@workmate.ai</span>
+              You are using the <span className="font-medium text-foreground">Demo Workspace</span>.
+              No account is required — all tools are available right away.
             </p>
-            <Separator />
-            <Button asChild variant="destructive">
-              <Link to="/login">
-                <LogOut className="size-4" /> Log out
-              </Link>
-            </Button>
           </CardContent>
         </Card>
       </div>
