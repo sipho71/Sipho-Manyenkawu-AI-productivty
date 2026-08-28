@@ -8,7 +8,6 @@ import {
   MessageSquare,
   Settings,
   Sparkles,
-  LogOut,
 } from "lucide-react";
 
 import {
@@ -96,29 +95,14 @@ export function AppSidebar() {
       </SidebarContent>
 
       <SidebarFooter className="border-t border-sidebar-border">
-        <SidebarMenu>
-          <SidebarMenuItem>
-            <SidebarMenuButton asChild size="lg" tooltip="Sipho Ndlovu">
-              <Link to="/app/settings">
-                <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-sidebar-accent text-xs font-semibold text-sidebar-accent-foreground">
-                  SN
-                </span>
-                <span className="grid flex-1 text-left leading-tight">
-                  <span className="truncate text-sm font-medium">Sipho Ndlovu</span>
-                  <span className="truncate text-xs opacity-70">sipho@workmate.ai</span>
-                </span>
-              </Link>
-            </SidebarMenuButton>
-          </SidebarMenuItem>
-          <SidebarMenuItem>
-            <SidebarMenuButton asChild tooltip="Log out">
-              <Link to="/login">
-                <LogOut />
-                <span>Log out</span>
-              </Link>
-            </SidebarMenuButton>
-          </SidebarMenuItem>
-        </SidebarMenu>
+        <div className="flex items-center gap-2.5 px-2 py-3">
+          <span className="bg-accent-gradient flex size-8 shrink-0 items-center justify-center rounded-lg">
+            <Sparkles className="size-4 text-primary-foreground" />
+          </span>
+          <span className="truncate text-sm font-medium group-data-[collapsible=icon]:hidden">
+            Demo Workspace
+          </span>
+        </div>
       </SidebarFooter>
     </Sidebar>
   );

@@ -87,11 +87,8 @@ function Landing() {
             </a>
           </nav>
           <div className="flex items-center gap-2">
-            <Button asChild variant="ghost" size="sm">
-              <Link to="/login">Log in</Link>
-            </Button>
             <Button asChild size="sm">
-              <Link to="/signup">Get Started</Link>
+              <Link to="/app">Get Started</Link>
             </Button>
           </div>
         </div>
@@ -115,7 +112,7 @@ function Landing() {
               </p>
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
                 <Button asChild size="lg" variant="secondary">
-                  <Link to="/signup">
+                  <Link to="/app">
                     Get Started <ArrowRight className="size-4" />
                   </Link>
                 </Button>
@@ -264,17 +261,9 @@ function Landing() {
             </p>
             <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
               <Button asChild size="lg" variant="secondary">
-                <Link to="/signup">
+                <Link to="/app">
                   Get Started <ArrowRight className="size-4" />
                 </Link>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"
-              >
-                <Link to="/login">I already have an account</Link>
               </Button>
             </div>
           </div>
